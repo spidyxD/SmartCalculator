@@ -1,7 +1,18 @@
 window.onload = function () { //Acciones tras cargar la página
   pantalla = document.getElementById("textoPantalla"); //elemento pantalla de salida
   document.onkeydown = teclado; //función teclado disponible
+  
+  /* Cambiar el color del último botón seleccionado. */
+  $('input').on('click', function() {
+
+    $('input').removeClass('Selected');
+    $(this).addClass('Selected');
+
+  });
+
+
 }
+
 x = "0"; //número en pantalla
 xi = 1; //iniciar número en pantalla: 1=si; 0=no;
 coma = 0; //estado coma decimal 0=no, 1=si;
