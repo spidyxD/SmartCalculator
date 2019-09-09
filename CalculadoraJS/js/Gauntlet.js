@@ -12,16 +12,18 @@ function trick() {
         gauntlet.src = 'img/2.png';
         setTimeout(function() {
             gauntlet.src = 'img/3.png';
-        }, 400)
+        }, 400);
         setTimeout(function() {
             gauntlet.src = 'img/4.png';
-        }, 1000)
+        }, 1000);
         setTimeout(function() {
             gauntlet.src = 'img/5.png';
             kill();
-        }, 1200)
+        }, 1200);
         active = 1;
-        document.getElementById('character2').style.display = "none";
+        setTimeout(function() {
+            document.getElementById('character2').style.display = "none";
+        }, 1500);
     } else {
         gauntlet.src = 'img/6.png';
         setTimeout(function() {
@@ -29,7 +31,10 @@ function trick() {
         }, 1000);
         revive();
         active = 0;
-        document.getElementById('character2').style.display = "block";
+        setTimeout(function() {
+            document.getElementById('character2').style.display = "block";
+        }, 1500);
+
     }
 }
 
