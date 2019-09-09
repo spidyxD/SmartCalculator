@@ -101,7 +101,7 @@ function retro() { //Borrar sólo el último número escrito.
 }
 
 function borradoParcial() {
-    location.reload();
+    trick();
     pantalla.innerHTML = 0; //Borrado de pantalla;
     x = 0; //Borrado indicador número pantalla.
     coma = 0; //reiniciamos también la coma       
