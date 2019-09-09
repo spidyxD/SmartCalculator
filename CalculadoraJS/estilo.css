@@ -1,129 +1,351 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
 
 /*aspectos generales: bordes y color de fondo de calculadora*/
-.calculadora { border: 3px gray ridge; width: 300px;text-align: center; }
+
+.calculadora {
+    border: 3px gray ridge !important;
+    width: 300px !important;
+    text-align: center !important;
+}
+
 
 /*pantalla de visualización: bordes, posición, color de fondo, estilo letra.*/
-#textoPantalla { width: 240px; border: 2px black solid; text-align: right; 
-                 position: relative; left: 23px;  padding: 0px 5px;
-                 background-color: white; /* font-family: "courier new"; */
-                 overflow: hidden;}
+
+#textoPantalla {
+    width: 240px !important;
+    border: 2px black solid !important;
+    text-align: right !important;
+    position: relative !important;
+    left: 23px !important;
+    padding: 0px 5px !important;
+    background-color: white !important;
+    /* font-family: "courier new"  !important; */
+    overflow: hidden !important;
+}
+
 
 /*botones normales: anchura y margen*/
-.calculadora [type=button] { width: 50px; padding: 0;  }
-/*botones especiales*/
-.calculadora input.largo { color: red; width: 80px;  }
 
-/*Cambios de CSS de estudiantes*/ 
+.calculadora [type=button] {
+    width: 50px !important;
+    padding: 0 !important;
+}
+
+
+/*botones especiales*/
+
+.calculadora input.largo {
+    color: red !important;
+    width: 80px !important;
+}
+
+
+/*Cambios de CSS de estudiantes*/
+
 
 /* 1. Cambio de letra */
-body{
-    font-family: 'Orbitron', sans-serif;
-    /*font-size: 20px;*/
+
+body {
+    font-family: 'Orbitron', sans-serif !important;
+    /*font-size: 20px  !important;*/
 }
+
 
 /* 2. Cambio de color de fondo por un gradiente de dos colores. */
-body{
-    background: #59C173;
-    background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);
-    background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173);
+
+body {
+    background: #59C173 !important;
+    background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173) !important;
+    background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173) !important;
 }
+
 
 /* 3. Cambio de letra dentro de los botones. */
+
 .calculadora [type=button] {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Orbitron', sans-serif !important;
 }
+
 
 /* 4. Cambio de color y color de fondo en C, con función de borrado, acorde al nivel de borrado que pueden proporcionar esos botones. */
-#C{
-    background-color: #ff4757;
-    color: white;
+
+#C {
+    background-color: #ff4757 !important;
+    color: white !important;
 }
+
 
 /* 5. Diferenciazión en botón CE.*/
+
 #CE {
-    background-color: #ff6348;
-    color: white;
+    background-color: #ff6348 !important;
+    color: white !important;
 }
+
 
 /* 6. Cambio de color y color de fondo en Retro, indicando el nivel de borrado en relación con el color asignado. */
-#Retro{
-    background-color: #ffa502;
-    color: white;
+
+#Retro {
+    background-color: #ffa502 !important;
+    color: white !important;
 }
+
 
 /* 7. Cambio de color, color de fondo en botones con función de borrado. */
+
 .calculadora input.O-Specials {
-    background-color: #2ed573; 
-    color:white;   
+    background-color: #2ed573 !important;
+    color: white !important;
 }
 
+
 /* 8. Ubicando la calculadora en el centro de la pantalla. */
-.calculadora{
-    margin-left: 42.5%;
-    margin-top: 10%;
+
+.calculadora {
+    margin-left: 42.5% !important;
+    margin-top: 10% !important;
 }
+
 
 /* 9. Diferenciazión de botones número a nivel de pantalla. */
 
-.number{
-    background-color: white; 
-    color:black;
+.number {
+    background-color: white !important;
+    color: black !important;
 }
+
 
 /* 10. Redondeando botones en general. */
 
 .calculadora [type=button] {
-    border-radius: 5px;
+    border-radius: 5px !important;
 }
+
 
 /* 11. Redondeando el texto de la calculadora */
-#textoPantalla{
-    border-radius: 5px;
+
+#textoPantalla {
+    border-radius: 5px !important;
 }
+
 
 /* 12. Redondeando el texto de la calculadora */
-.calculadora{
-    border-radius: 30px;
+
+.calculadora {
+    border-radius: 30px !important;
 }
+
 
 /* 13. Color de fondo de cuenta pollos. */
-.calculadora{
-    background-color:#a4b0be
+
+.calculadora {
+    background-color: #a4b0be !important;
 }
+
 
 /* 14. Cambiando diseño de botones normales. */
-.O-Noramls{
-    background-color: black;
-    color: white;
+
+.O-Noramls {
+    background-color: black !important;
+    color: white !important;
 }
+
 
 /* 15. Con ayuda de .JS podemos indicar cuál fue el último botón que tocamos. */
-.calculadora input.Selected{
-    background-color: #3742fa;
+
+.calculadora input.Selected {
+    background-color: #3742fa !important;
 }
+
 
 /* 16. Aumentando el tamaño de los botones en general. */
+
 .calculadora [type=button] {
-    padding: 10px;
+    padding: 10px !important;
 }
+
 
 /* 17. Aumentando el tamaño del texto por pantalla. */
-#textoPantalla{
-    padding: 10px;
+
+#textoPantalla {
+    padding: 10px !important;
 }
+
 
 /* 18. Aumentando el tamaño de la calculadora en general. */
-.calculadora{
-    padding: 25px;
+
+.calculadora {
+    padding: 25px !important;
 }
+
 
 /* 19. Cambiar el color "on Hover". */
+
 .calculadora [type=button]:hover {
-    background-color:mediumpurple;
+    background-color: mediumpurple !important;
 }
 
+
 /* 20. Dar sombra a los botones "on Hover". */
+
 .calculadora [type=button]:hover {
-    box-shadow: 2px 2px;
+    box-shadow: 2px 2px !important;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.one {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+.two {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+}
+
+.three {
+    grid-column: 1;
+    grid-row: 2 / 5;
+}
+
+.four {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.five {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.six {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+.calculadora {
+    position: relative;
+    -webkit-animation-name: example;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes example {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+
+/* Standard syntax */
+
+@keyframes example {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+div.at-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.at-item {
+    color: #010408;
+    font-size: 30px;
+    animation-name: angry-animation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes angry-animation {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    20% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+    80% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }

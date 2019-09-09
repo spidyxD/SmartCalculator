@@ -2,67 +2,153 @@
 <html>
 
 <head>
-	<title>MiCalculadora</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="estilo.css">
-	<script type="text/javascript" src="calculadora.js"></script>
+    <title>MiCalculadora 2.0</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="animation.css">
+    <script type="text/javascript" src="calculadora.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/fav.png" />
+
 </head>
 
 <body>
+    <center>
+        <div class='at-container'>
+            <h3 class='at-item'>Calculator
+            </h3>
+            <img id="gauntlet" src="img/1.png" onclick="trick()">
+        </div>
+    </center>
+    <div class="wrapper">
+        <div class="one">
+            <div class="container">
+                <div class="calculadora" id="calculadora">
+                    <form action="#" name="calculadora" id="calculadora">
+                        <p id="textoPantalla">0</p>
+                        <p>
+                            <input type="button" class="largo" value="Retro" id="Retro" onclick="retro()" />
+                            <input type="button" class="largo" value="CE" id="CE" onclick="borradoParcial()" />
+                            <input type="button" class="largo" value="C" id="C" onclick="borradoTotal()" />
+                        </p>
+                        <p>
+                            <input type="button" class="largo O-Specials" value="Sen" onclick="seno()" />
+                            <input type="button" class="largo O-Specials" value="Cos" onclick="coseno()" />
+                            <input type="button" class="largo O-Specials" value="Tan" onclick="tangente()" />
+                        </p>
+                        <p>
+                            <input type="button" class="largo O-Specials" value="ln" onclick="ln()" />
+                            <input type="button" class="largo O-Specials" value="ln10" onclick="ln10()" />
+                            <input type="button" class="largo O-Specials" value="RaizXY" onclick="raizXY()" />
+                        </p>
+                        <p>
+                            <input type="button" class="largo O-Specials" value="Mod" onclick="modulo()" />
+                            <input type="button" class="largo O-Specials" value=" Pow(x,y) " onclick="potenciaXY()" />
+                        </p>
+                        <p>
+                            <input type="button" value="7" class="number" onclick="numero(7)" />
+                            <input type="button" value="8" class="number" onclick="numero('8')" />
+                            <input type="button" value="9" class="number" onclick="numero('9')" />
+                            <input type="button" value="/" class="O-Noramls" onclick="operar('/')" />
+                            <input type="button" value="Raiz" class="O-Noramls" onclick="raizc()" />
+                        </p>
+                        <p>
+                            <input type="button" value="4" class="number" onclick="numero('4')" />
+                            <input type="button" value="5" class="number" onclick="numero('5')" />
+                            <input type="button" value="6" class="number" onclick="numero('6')" />
+                            <input type="button" value="*" class="O-Noramls" onclick="operar('*')" />
+                            <input type="button" value="%" class="O-Noramls" onclick="porcent()" />
+                        </p>
+                        <p>
+                            <input type="button" value="1" class="number" onclick="numero('1')" />
+                            <input type="button" value="2" class="number" onclick="numero('2')" />
+                            <input type="button" value="3" class="number" onclick="numero('3')" />
+                            <input type="button" value="-" class="O-Noramls" onclick="operar('-')" />
+                            <input type="button" value="1/x" class="O-Noramls" onclick="inve()" />
+                        </p>
+                        <p>
+                            <input type="button" value="0" class="number" onclick="numero('0')" />
+                            <input type="button" value="+/-" class="O-Noramls" onclick="opuest()" />
+                            <input type="button" value="." class="O-Noramls" onclick="numero('.')" />
+                            <input type="button" value="+" class="O-Noramls" onclick="operar('+')" />
+                            <input type="button" value="=" class="O-Noramls" onclick="igualar()" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="two">
+            <div class="container" id="character2">
+                <div class="evil">
+                    <ul class="evil_hair">
+                        <li class="eh1"></li>
+                        <li class="eh2"></li>
+                        <li class="eh3"></li>
+                        <li class="eh4"></li>
+                        <li class="eh5"></li>
+                    </ul>
 
-	<div class="calculadora">
-		<form action="#" name="calculadora" id="calculadora">
-			<p id="textoPantalla">0</p>
-			<p>
-				<input type="button" class="largo" value="Retro" id="Retro" onclick="retro()" />
-				<input type="button" class="largo" value="CE" id="CE" onclick="borradoParcial()" />
-				<input type="button" class="largo" value="C" id="C" onclick="borradoTotal()" />
-			</p>
-			<p>
-				<input type="button" class="largo O-Specials" value="Sen" onclick="seno()" />
-				<input type="button" class="largo O-Specials" value="Cos" onclick="coseno()" />
-				<input type="button" class="largo O-Specials" value="Tan" onclick="tangente()" />
-			</p>
-			<p>
-				<input type="button" class="largo O-Specials" value="ln" onclick="ln()" />
-				<input type="button" class="largo O-Specials" value="ln10" onclick="ln10()" />
-				<input type="button" class="largo O-Specials" value="RaizXY" onclick="raizXY()" />
-			</p>
-			<p>
-				<input type="button" class="largo O-Specials" value="Mod" onclick="modulo()" />
-				<input type="button" class="largo O-Specials" value=" Pow(x,y) " onclick="potenciaXY()" />
-			</p>
-			<p>
-				<input type="button" value="7" class="number" onclick="numero(7)" />
-				<input type="button" value="8" class="number" onclick="numero('8')" />
-				<input type="button" value="9" class="number" onclick="numero('9')" />
-				<input type="button" value="/" class="O-Noramls" onclick="operar('/')" />
-				<input type="button" value="Raiz" class="O-Noramls" onclick="raizc()" />
-			</p>
-			<p>
-				<input type="button" value="4" class="number" onclick="numero('4')" />
-				<input type="button" value="5" class="number" onclick="numero('5')" />
-				<input type="button" value="6" class="number" onclick="numero('6')" />
-				<input type="button" value="*" class="O-Noramls" onclick="operar('*')" />
-				<input type="button" value="%" class="O-Noramls" onclick="porcent()" />
-			</p>
-			<p>
-				<input type="button" value="1" class="number" onclick="numero('1')" />
-				<input type="button" value="2" class="number" onclick="numero('2')" />
-				<input type="button" value="3" class="number" onclick="numero('3')" />
-				<input type="button" value="-" class="O-Noramls" onclick="operar('-')" />
-				<input type="button" value="1/x" class="O-Noramls" onclick="inve()" />
-			</p>
-			<p>
-				<input type="button" value="0" class="number" onclick="numero('0')" />
-				<input type="button" value="+/-" class="O-Noramls" onclick="opuest()" />
-				<input type="button" value="." class="O-Noramls" onclick="numero('.')" />
-				<input type="button" value="+" class="O-Noramls" onclick="operar('+')" />
-				<input type="button" value="=" class="O-Noramls" onclick="igualar()" />
-			</p>
-		</form>
-	</div>
+                    <div class="eyes">
+                        <div class="eye_animate"></div>
 
+                        <div class="glasses"></div>
+                        <div class="white_part">
+                            <div class="brown_eye">
+                                <span class="black_part"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="black_tie">
+                        <span class="right_tie">
+						<div class="top_tie"></div>
+						<div class="down_tie"></div>
+					</span>
+                        <span class="left_tie">
+						<div class="top_tie"></div>
+						<div class="down_tie"></div>
+					</span>
+                    </div>
+
+                    <div class="evil_mouth">
+                        <span class="evil_teeth"></span>
+                        <span class="evil_teeth1"></span>
+                    </div>
+
+                    <div class="clothes">
+                        <div class="right_shirt evil_right_shirt"></div>
+                        <div class="right_shirt evil_left_shirt"></div>
+                        <div class="evil_bottom"></div>
+                        <div class="evil_logo">
+                            <p>M</p>
+                        </div>
+                    </div>
+
+                    <div class="legs">
+                        <div class="evil_right_leg"></div>
+                        <div class="evil_right_leg evil_left_leg"></div>
+                        <div class="shoes evil_right_shoes"><span class="small_shoes"></span></div>
+                        <div class="shoes evil_left_shoes"><span class="small_shoes"></span></div>
+                    </div>
+
+
+                    <div class="evil_hand">
+                        <div class="evil_rh">
+                            <span class="evil_gloves_rh"></span>
+                        </div>
+                        <div class="evil_lh">
+                            <span class="evil_gloves_lh"></span>
+                        </div>
+                    </div>
+                    <h2>You can do it!...</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/Gauntlet.js"></script>
 </body>
 
 </html>
