@@ -22,6 +22,7 @@ function trick() {
         }, 1200);
         active = 1;
         setTimeout(function() {
+            //document.getElementById('title').style.display = "none";
             document.getElementById('character2').style.display = "none";
         }, 1500);
     } else {
@@ -32,6 +33,7 @@ function trick() {
         revive();
         active = 0;
         setTimeout(function() {
+            //document.getElementById('title').style.display = "block";
             document.getElementById('character2').style.display = "block";
         }, 1500);
 
